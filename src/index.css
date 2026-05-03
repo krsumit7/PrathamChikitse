@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --emergency-red: #E11D48;
+  --emergency-orange: #F59E0B;
+  --safe-green: #10B981;
+}
+
+body {
+  @apply bg-zinc-50 text-zinc-900 font-sans;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer utilities {
+  .emergency-shadow {
+    box-shadow: 0 10px 30px -10px rgba(225, 29, 72, 0.2);
+  }
+}
+
+/* Custom scrollbar for clean dashboard feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-zinc-400;
+}
